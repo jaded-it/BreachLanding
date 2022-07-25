@@ -69,14 +69,14 @@ ul {
 }
 
 .call-to-action {
-    height: 64px;
-    width: 60%;
+    /* height: 50px; */
+    width: 18cm;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 3em;
+    padding: 2.5em 7em;
     border-radius: 8px;
 }
 
@@ -90,6 +90,19 @@ ul {
     justify-content: start;
     align-items: start;
     gap: 8px;
+}
+
+.aspiring-quote .container {
+    max-width: 670px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+}
+
+.author {
+    align-self: end;
 }
 
 .content.intro button, .call-to-action button {
@@ -115,6 +128,16 @@ ul {
     font-size: 24px;
     color: #F9FAF8;
     font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    gap: 24px;
+}
+
+li * {
+    text-decoration: none;
+    color: #E5E7EB;
 }
 
 .footer {
@@ -189,5 +212,11 @@ button {
 }
 
 .call-to-action button {
-    
+    border-color: white;
+    border-style: solid;
+}
+
+.author {
+    font-size: 20px;
+    font-weight: bold;
 }
