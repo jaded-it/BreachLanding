@@ -14,7 +14,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.content, .header, .footer {
+.content, .header, .header .container, .footer {
     width: 100%;
 
     display: flex;
@@ -28,9 +28,14 @@ body {
     padding: 2cm 0;
 }
 
-.header {
+.content {
+    flex-wrap: wrap;
+}
+
+.header .container {
+    max-width: 26cm;
     height: 64px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 ul {
@@ -69,7 +74,6 @@ ul {
 }
 
 .call-to-action {
-    /* height: 50px; */
     width: 18cm;
 
     display: flex;
