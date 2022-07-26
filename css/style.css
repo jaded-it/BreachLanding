@@ -1,5 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
+/* Variables Start */
+
+:root {
+    --main-background-color:white;
+
+    --main-header-color:#662fa9;
+    --main-intro-color:#271F30;
+    --main-footer-color:#16121a;
+
+    /* Header Items */
+    --main-logo-color:#F9FAF8;
+    --main-nav-link-color:#FAFAFF;
+
+    /* Intro Items */
+    --intro-title-color:#FAFAFF;
+    --intro-subtext-color:#F9FAF8;
+
+    /* Information Sections */
+    --information-title-color:#271F30;
+
+    /* Quote Section */
+    --aspiring-quote-background-color: #f1ebff;
+    --quote-color:#271F30;
+
+    /* Call to action section */
+    --call-to-action-title-color: black;
+    --call-to-action-subtext-color: black;
+    --call-to-action-link-color:black;
+    --call-to-action-background-color: #271F30;
+    --button-border-color: black;
+
+    /* Button Section */
+    --button-color:#7BC950;
+
+    /* Footer Section */
+    --footer-text-color:#F9FAF8;
+
+    /* Fallback color for unloaded images */
+    --image-container-background-color: lightslategray;
+}
+
+/* Variables End */
+
+
 /* Flex CSS Begin */
 
 body {
@@ -12,9 +56,11 @@ body {
     padding: 0;
 
     font-family: 'Roboto', sans-serif;
+
+    background-color: var(--main-background-color);
 }
 
-.content, .header, .header .container, .footer {
+.content, .header, .header .container{
     width: 100%;
 
     display: flex;
@@ -26,6 +72,20 @@ body {
 
 .content, header, footer {
     padding: 2cm 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer .container {
+    display: flex;
+    flex: 1;
+    max-width: 26cm;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {
@@ -99,7 +159,7 @@ ul {
 }
 
 .aspiring-quote .container {
-    max-width: 670px;
+    max-width: 750px;
 
     display: flex;
     flex-direction: column;
@@ -109,6 +169,7 @@ ul {
 
 .author {
     align-self: end;
+    padding-right: 48px;
 }
 
 .content.intro button, .call-to-action button {
@@ -120,20 +181,33 @@ ul {
 
     font-size: 16px;
     font-weight: bold;
-    color: #F9FAF8;
+    color: var(--call-to-action-link-color);
     text-decoration: none;
 }
 
 /* Flex CSS End */
 
 .header, .footer, .content.intro {
-    background-color: #1F2937;
+    background-color: var(--main-header-color);
+}
+
+.header, .footer {
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    position:relative;
+}
+
+.content.intro {
+    background-color: var(--main-intro-color);
+}
+
+.footer {
+    background-color: var(--main-footer-color);
 }
 
 .header .logo a {
     text-decoration: none;
     font-size: 24px;
-    color: #F9FAF8;
+    color: var(--main-logo-color);
     font-weight: bold;
 }
 
@@ -144,44 +218,44 @@ ul {
 
 li a {
     text-decoration: none;
-    color: #E5E7EB;
+    color: var(--main-nav-link-color);
 }
 
 .footer {
-    color: #F9FAF8;
+    color: var(--footer-text-color);
 }
 
 .intro .title {
     font-size: 44px;
     font-weight: 900;
-    color: #F9FAF8;
+    color: var(--intro-title-color);
 }
 
 .intro .subtext {
     font-size: 18px;
-    color: #E5E7EB;
+    color: var(--intro-subtext-color);
 }
 
 .information .title {
     font-size: 36px;
     font-weight: 900;
-    color: #1F2937;
+    color: var(--information-title-color);
 
     margin-top: -1.2em;
 }
 
 .content.aspiring-quote {
-    background-color: #E5E7EB;
+    background-color: var(--aspiring-quote-background-color);
 }
 
 .quote {
     font-size: 36px;
     font-style: italic;
-    color: #1F2937;
+    color: var(--quote-color);
 }
 
 button, .call-to-action {
-    background-color: #3882F6;
+    background-color: var(--button-color);
 }
 
 img {
@@ -191,27 +265,27 @@ img {
 .image-container {
     width: 150px;
     height: 150px;
-    background-color: lightslategray;
+    background-color: var(--image-container-background-color);
 }
 
 .intro .image-container {
     width: 460px;
-    height: 210px;
+    height: 215px;
 }
 
 .call-to-action .title {
-    color: #F9FAF8;
+    color: var(--call-to-action-title-color);
     font-size: 22px;
     font-weight: bold;
 }
 
 .call-to-action .subtext {
-    color: #E5E7EB;
+    color: var(--call-to-action-subtext-color);
     font-size: 18px;
 }
 
 button {
-    background-color: #3882F6;
+    background-color: var(--button-color);
     padding: 7px 30px;
     border-radius: 8px;
 
@@ -219,11 +293,29 @@ button {
 }
 
 .call-to-action button {
-    border-color: white;
+    border-color: var(--button-border-color);
     border-style: solid;
 }
 
 .author {
     font-size: 20px;
     font-weight: bold;
+}
+
+img {
+    width: inherit;
+    height: inherit;
+}
+
+.card .image-container, .card img {
+    border-radius: 16px;
+}
+
+.call-to-action-container {
+    background-color: var(--call-to-action-background-color);
+}
+
+button a {
+    /* prevent button text from wrapping */
+    white-space: nowrap;
 }
