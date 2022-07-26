@@ -88,14 +88,18 @@ body {
     align-items: center;
 }
 
-.content {
-    flex-wrap: wrap;
-}
-
 .header .container {
     max-width: 26cm;
     height: 64px;
     justify-content: space-between;
+}
+
+.header .container, .footer .container {
+    margin: 0 40px;
+}
+
+.content {
+    flex-wrap: wrap;
 }
 
 ul {
@@ -165,6 +169,8 @@ ul {
     flex-direction: column;
 
     gap: 0;
+
+    margin: 0 40px;
 }
 
 .author {
