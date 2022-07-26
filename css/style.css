@@ -180,6 +180,7 @@ ul {
 .author {
     align-self: end;
     padding-right: 48px;
+    white-space: nowrap;
 }
 
 .content.intro button, .call-to-action button {
