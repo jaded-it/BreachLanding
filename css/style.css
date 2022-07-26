@@ -60,6 +60,10 @@ body {
     background-color: var(--main-background-color);
 }
 
+.content.intro {
+    flex-direction: row-reverse;
+}
+
 .content, .header, .header .container{
     width: 100%;
 
