@@ -38,7 +38,7 @@
     --footer-text-color:#F9FAF8;
 
     /* Fallback color for unloaded images */
-    --image-container-background-color: lightslategray;
+    --image-container-background-color: #181c28;
 }
 
 /* Variables End */
