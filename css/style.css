@@ -113,6 +113,11 @@ ul {
     padding: 0;
 }
 
+.nav li {
+    display: flex;
+    align-items: center;
+}
+
 .intro .left-panel {
     max-width: 430px;
 }
